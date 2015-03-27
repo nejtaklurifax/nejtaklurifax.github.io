@@ -5,10 +5,20 @@
    {
     if (status)
     {
-     //alert("Logged in to " + network);
-		document.write(network+"<br/>");
-	}else{
-     alert("Not logged in to " + network);
+		if(network == "Facebook"){
+			$("#fbin").html("<img src='" + network + "'>");
+		}
+		else if(network == "Google"){
+			$("#goin").html("<img src='" + network + "'>");
+		}
+		else if(network == "GooglePlus"){
+			$("#gpin").html("<img src='" + network + "'>");
+		}
+		else if(network == "Twitter"){
+			$("#twin").html("<img src='" + network + "'>");
+		}
+    }else{
+     //alert("Not logged in to " + network);
     }
    }
  </script>
@@ -31,8 +41,12 @@
      
     <img style="display:none;" src="https://twitter.com/login?redirect_after_login=%2Fimages%2Fspinner.gif" onload="show_login_status('Twitter', true)" onerror="show_login_status('Twitter', false)" />
      
+	 <div id="fbin"></div>
+	 <div id="gpin"></div>
+	 <div id="goin"></div>
+	 <div id="twin"></div>
     <div id="fb-root"></div>
-
+	
 
 
     <script>
@@ -43,7 +57,7 @@
        {
         show_login_status("Facebook", true);
        }else{
-        show_login_status("Facebook", false);
+        //show_login_status("Facebook", false);
        }
       });
      };
