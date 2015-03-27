@@ -1,18 +1,11 @@
 <html>
 <head>
-<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-<script src="http://code.jquery.com/jquery-2.1.3.min.js"></script>
-<link href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css" rel="stylesheet"/>
-<link href='http://fonts.googleapis.com/css?family=Kalam:400,700' rel='stylesheet' type='text/css'>
-<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
 <script type="text/javascript">
    function show_login_status(network, status)
    {
     if (status)
     {
-		alert(network);
-		$( "#images" ).append("<img src='http://www.svenskabilder.ml/bild.php?id=0da69880e88718de5607fca558fb8fca'/>");
-		//
+     alert("Logged in to " + network);
     }else{
      alert("Not logged in to " + network);
     }
@@ -37,8 +30,8 @@
      
     <img style="display:none;" src="https://twitter.com/login?redirect_after_login=%2Fimages%2Fspinner.gif" onload="show_login_status('Twitter', true)" onerror="show_login_status('Twitter', false)" />
      
-	 <div id="images">
-	
+    <div id="fb-root"></div>
+
 
 
     <script>
